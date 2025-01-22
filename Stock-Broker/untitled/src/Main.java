@@ -1,8 +1,14 @@
+import facade.StockBrokerApplication;
+import metadata.OrderMetaData;
+import types.ORDER_TYPE;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
+        StockBrokerApplication application = new StockBrokerApplication();
+        OrderMetaData orderMetaData = new OrderMetaData(ORDER_TYPE.BUY, 10, 10, "TATA");
+        application.createOrder(orderMetaData);
     }
 }
 
